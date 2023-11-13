@@ -1,0 +1,3 @@
+from data_manager_interface import DataManagerInterface
+
+class JSONDataManager(DataManagerInterface):

@@ -35,48 +35,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <title>User Favourite Movies</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WySzC8X+5Rn5Ie6K7P/C4pWO5dDTCvPT5" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #495057;
-        }
-
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        h1, h2 {
-            color: #007bff;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        th {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-
-        .btn-back {
-            margin-top: 20px;
-        }
-    </style>
-
 </head>
 <body>
 
@@ -103,7 +61,7 @@
       </div>
     </form>
       <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Watch List</a></li>
+      <li class="active"><a href="#">Watch List</a></li> Registration
       <li><a href="#">Login</a></li>
       <li><a href="#">Registration</a></li>
     </ul>
@@ -114,42 +72,37 @@
 </nav>
 
 <!-- Main Content -->
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3">
-
-    </div>
-    <div class="col-sm-6">
-     <h1>Add New User</h1>
-
-    <!-- Display flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
+<div class="container main-content">
+    <div class="row">
+        <!-- Featured Movies -->
+        <div class="col-lg-8">
+            <h2>Featured Movies</h2>
+            <div class="card-deck">
+                <!-- Sample Movie Card -->
+                <div class="card movie-card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Movie Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title</h5>
+                        <p class="card-text">Director: Director Name</p>
+                        <p class="card-text">Year: 2022</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
                 </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
-         <form method="post" action="/add_user">
-        <div class="form-group">
-            <label for="name">User Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+                <!-- Repeat similar card elements for other movies -->
+            </div>
         </div>
 
-        <button type="submit" onclick="showSuccessPopup()" class="btn btn-primary">Add User</button>
-    </form>
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <h2>Top Rated</h2>
+            <ul class="list-group">
+                <!-- Sample Movie List Item -->
+                <li class="list-group-item">Movie Title</li>
+                <!-- Repeat similar list items for other movies -->
+            </ul>
+        </div>
     </div>
-    <div class="col-sm-3">
-    </div>
-
-
-  </div>
 </div>
-
 
 <!-- Bootstrap JS and Popper.js (Optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

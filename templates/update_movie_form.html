@@ -34,48 +34,8 @@
     </style>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <title>User Favourite Movies</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WySzC8X+5Rn5Ie6K7P/C4pWO5dDTCvPT5" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #495057;
-        }
 
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        h1, h2 {
-            color: #007bff;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        th {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-
-        .btn-back {
-            margin-top: 20px;
-        }
-    </style>
+      <title>User Update Movies</title>
 
 </head>
 <body>
@@ -103,7 +63,7 @@
       </div>
     </form>
       <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Watch List</a></li>
+      <li class="active"><a href="#">Watch List</a></li> Registration
       <li><a href="#">Login</a></li>
       <li><a href="#">Registration</a></li>
     </ul>
@@ -121,27 +81,55 @@
 
     </div>
     <div class="col-sm-6">
-     <h1>Add New User</h1>
+    <h2 class="mt-4 mb-4">Update Movie</h2>
 
-    <!-- Display flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
-         <form method="post" action="/add_user">
+    <form method="post" action="/users/{{ user_id }}/update_movie/{{ movie_id }}" enctype="multipart/form-data">
+        <!-- Movie Title -->
         <div class="form-group">
-            <label for="name">User Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ movie_details.name }}" required>
         </div>
 
-        <button type="submit" onclick="showSuccessPopup()" class="btn btn-primary">Add User</button>
+        <!-- Director -->
+        <div class="form-group">
+            <label for="director">Director:</label>
+            <input type="text" class="form-control" id="director" name="director" value="{{ movie_details.director }}" required>
+        </div>
+
+        <!-- Year -->
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="number" class="form-control" id="year" name="year" value="{{ movie_details.year }}" required>
+        </div>
+
+        <!-- Rating -->
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <input type="number" class="form-control" id="rating" name="rating" step="0.1" value="{{ movie_details.rating }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="poster" class="form-label">Poster:</label>
+            <input type="text" step="0.1" class="form-control" id="poster" name="poster" step="0.1" value="{{ movie_details.poster }}" required>
+        </div >
+
+         <div class="mb-3">
+            <label for="actors" class="form-label">Actors:</label>
+            <input type="text" step="0.1" class="form-control" id="actors" name="actors" step="0.1" value="{{ movie_details.actors }}" required>
+        </div >
+
+         <div class="mb-3">
+            <label for="rating" class="form-label">Plot:</label>
+            <input type="text" step="0.1" class="form-control" id="plot" name="plot" step="0.1" value="{{ movie_details.plot }}" required>
+        </div >
+         <input type="hidden" name="_method" value="PUT">
+
+        <!-- Submit Button -->
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary" style="padding: 10px 20px; margin-top: 10px;">Update Movie</button>
+        </div>
     </form>
+</div>
     </div>
     <div class="col-sm-3">
     </div>

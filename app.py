@@ -1,5 +1,15 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 from datamanager.json_data_manager import JSONDataManager
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, FloatField
+from wtforms.validators import DataRequired
+
+class UpdateMovieForm(FlaskForm):
+    # Define your form fields here
+    title = StringField('Title', validators=[DataRequired()])
+    director = StringField('Director', validators=[DataRequired()])
+    year = IntegerField('Year', validators=[DataRequired()])
+    rating = FloatField('Rating', validators=[DataRequired()])
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -12,6 +22,30 @@ data_manager = JSONDataManager()
 # data_manager = CSVDataManager('data/movies.csv')
 
 # Routes
+# @app.route('/')
+# def index():
+#     # Pass the movie data to the template
+#     return render_template('index.html', movies=data_manager.load_movies_data())
+# Replace this with your actual logic to calculate total pages
+
+@app.route('/')
+def index():
+    try:
+        # Get the movie data from the data manager
+        movies_data = data_manager.load_movies_data()
+
+        # Calculate total pages (assuming you have a function for this)
+        total_pages = data_manager.calculate_total_pages(movies_data)
+
+        # Render the template with the movie data and total pages
+        return render_template('index.html', movies=movies_data, total_pages=total_pages)
+
+    except Exception as e:
+        # Handle any exceptions that might occur
+        error_message = f"An error occurred: {e}"
+
+        # You might want to render an error template or log the error
+        return render_template('error.html', error_message=error_message)
 
 @app.route('/users', methods=['GET'])
 def list_users():
@@ -30,6 +64,7 @@ def list_users():
         # Handle any exceptions that might occur
         error_message = f"An error occurred: {e}"
         return render_template('error.html', error_message=error_message)
+
 
 
 @app.route('/movies_by_user/<int:user_id>', methods=['GET'])
@@ -156,12 +191,14 @@ def add_movie_route(user_id):
                 director = data.get('director')
                 year = data.get('year')
                 rating = data.get('rating')
+
             else:
                 # Get data from the form
                 movie_name = request.form.get('name')
                 director = request.form.get('director')
                 year = request.form.get('year')
                 rating = request.form.get('rating')
+
 
             if year is None or rating is None:
                 raise ValueError("Year and Rating are required fields")
@@ -224,6 +261,8 @@ def list_of_users():
 
 @app.route('/users/<user_id>/update_movie/<movie_id>', methods=['GET', 'POST'])
 def update_movie(user_id, movie_id):
+
+
     user = data_manager.load_movies_data().get(str(user_id))
 
     if not user:
@@ -232,43 +271,50 @@ def update_movie(user_id, movie_id):
     movie_details = user.get('movies', {}).get(str(movie_id))
 
     if not movie_details:
-        return render_template('error.html', error_message="User not found")
+        return render_template('error.html', error_message="Movie not found")
 
-    # check the content type of the request
-    content_type = request.headers.get('Content-Type')
+    if request.method == 'GET':
+        # Render the update movie form and populate the form fields
+        return render_template('update_movie_form.html', user_id=user_id, movie_id=movie_id,
+                               movie_details=movie_details)
 
-    try:
-        if content_type == 'application/json':
-            # If the content type is JSON, update movie details using JSON data
-            new_movie_data = request.json
+    new_movie_data = None  # Define new_movie_data outside the try block
+    if request.method == 'POST':
+        try:
+            # Check for form data
+            if request.form:
+                new_movie_data = {}
+                if "name" in request.form:
+                    new_movie_data["name"] = request.form.get("name")
+                if "director" in request.form:
+                    new_movie_data["director"] = request.form.get("director")
+                if "year" in request.form:
+                    new_movie_data["year"] = int(request.form.get("year"))
+                if "rating" in request.form:
+                    new_movie_data["rating"] = float(request.form.get("rating"))
+                if "poster" in request.form:
+                    new_movie_data["poster"] = request.form.get("poster")
+                if "actors" in request.form:
+                    new_movie_data["actors"] = request.form.get("actors")
+                if "plot" in request.form:
+                    new_movie_data["plot"] = request.form.get("plot")
 
-        # Assuming request.json returns a dictionary with updated movie details
-        elif content_type == 'application/x-www-form-urlencoded':
-            # If the content type is form data, update movie details using form data
+            else:
+                # If it's not form data, assume it's JSON
+                new_movie_data = request.json
 
-            # Get data from the form
-            new_movie_data = {
+            # Update movie details in JSONDataManager
+            success = data_manager.update_movie(user_id, movie_id, new_movie_data)
 
-                "name": request.form.get('name'),
-                "director": request.form.get('director'),
-                "year": int(request.form.get('year')),
-                "rating": float(request.form.get('rating'))
-            }
-        else:
-            raise ValueError('Unsupported content type')
-    except ValueError as e:
-        return render_template('error.html', error_message=f'Error parsing data: {e}')
+            if success:
+                return redirect(url_for('user_movies', user_id=user_id))
+            else:
+                return render_template('error.html', error_message='Failed to update movie details')
 
-        # Update movie details in JSONDataManager
-        success = data_manager.update_movie(user_id, movie_id, new_movie_data)
+        except ValueError as e:
+            return render_template('error.html', error_message=f'Error parsing data: {e}')
 
-        if success:
-            return redirect(url_for('user_movies', user_id=user_id))
-        else:
-            return render_template('error.html', error_message='Failed to update movie details')
-
-
-@app.route('/users/<int:user_id>/movies')
+@app.route('/users/<user_id>/movies')
 def user_movies(user_id):
     user = data_manager.load_movies_data().get(str(user_id))
 
@@ -276,6 +322,19 @@ def user_movies(user_id):
         return render_template('error.html', error_message='User not found')
 
     return render_template('user_movies.html', user=user)
+
+
+@app.route('/users/<user_id>/delete_movie/<movie_id>', methods=['GET', 'POST'])
+def delete_movie_route(user_id, movie_id):
+    if request.method == 'POST':
+        success = data_manager.delete_movie(user_id, movie_id)
+        if success:
+            return redirect(url_for('user_movies', user_id=user_id))
+        else:
+            return render_template('error.html', error_message='Failed to delete movie')
+
+    # If the request method is GET, render the delete confirmation page
+    return render_template('delete_confirmation.html', user_id=user_id, movie_id=movie_id)
 
 
 if __name__ == '__main__':

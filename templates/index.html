@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Database</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WySzC8X+5Rn5Ie6K7P/C4pWO5dDTCvPT5" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+        }
+
+        .search-box {
+            width: 450px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .movie-card {
+            margin-bottom: 20px;
+        }
+    </style>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <title>User Update Movies</title>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">Tv Shows</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search" style="width: 450px;">
+
+          <div class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+          </div>
+      </div>
+    </form>
+      <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Watch List</a></li> Registration
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Registration</a></li>
+    </ul>
+
+  </div>
+
+
+</nav>
+
+<!-- Main Content -->
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-4">-->
+
+<!--    </div>-->
+<!--    <div class="col-sm-4">-->
+<!--    <h1>Welcome to the Home Page</h1>-->
+
+<!--    <h2>Featured Movies</h2>-->
+<!--&lt;!&ndash;    <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% for movie in movies %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <strong>{{ movie.title }}</strong> <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>Year: {{ movie.year }}</p><br>&ndash;&gt;-->
+<!--&lt;!&ndash;               <p> Director: {{ movie.director }}</p><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>Rating: {{ movie.rating }} </p><br>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--         {% for user_id, user in movies.items() %}-->
+<!--        <h3>User: {{ user.name }}</h3>-->
+<!--        {% for movie_id, movie in user.movies.items() %}-->
+<!--            <div>-->
+<!--                <h4>{{ movie.name }}</h4>-->
+<!--                <p>Year: {{ movie.year }}</p>-->
+<!--                <p>Director: {{ movie.director }}</p>-->
+<!--                <p>Rating: {{ movie.rating }}</p>-->
+<!--                {% if movie.poster != "N/A" %}-->
+<!--                <img src="{{ movie.poster }}" alt="{{ movie.name }} Poster" style="max-width: 100%;">-->
+<!--            {% else %}-->
+<!--                <p>Poster: Not Available</p>-->
+<!--            {% endif %}-->
+<!--                <p>Poster: Not Available</p>-->
+<!--                <p>Actors: {{ movie.actors }}</p>-->
+<!--                <p>Plot: {{ movie.plot }}</p>-->
+<!--            </div>-->
+<!--        {% endfor %}-->
+<!--    {% endfor %}-->
+
+<!--</div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4">-->
+<!--    </div>-->
+
+
+<!--  </div>-->
+<div class="container">
+    {% for user_id, user in movies.items() %}
+        <div class="row">
+            <h3 class="col-md-12">Movies Information</h3>
+            {% for movie_id, movie in user.movies.items() %}
+                <div class="col-md-4">
+                    <div class="movie-card">
+                        <h4>{{ movie.name }}</h4>
+                        <p>Year: {{ movie.year }}</p>
+                        <p>Director: {{ movie.director }}</p>
+                        <p>Rating: {{ movie.rating }}</p>
+                        {% if movie.poster != "N/A" %}
+                            <img src="{{ movie.poster }}" alt="{{ movie.name }} Poster" style="max-width: 100%;">
+                        {% else %}
+                            <p>Poster: Not Available</p>
+                        {% endif %}
+                        <p>Plot: {{ movie.plot }}</p>
+                        <p>Actors: {{ movie.actors }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+  <ul class="pagination justify-content-center">
+    {% for page in range(1, total_pages + 1) %}
+      <li class="page-item{% if page == current_page %} active{% endif %}">
+        <a class="page-link" href="{{ url_for('index', page=page) }}">{{ page }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+</div>
+
+
+<!-- Bootstrap JS and Popper.js (Optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" integrity="sha384-dlM3Eng/1FjLFdn4oLEUFy0e61/jBzm5SBIKeK03PtmDTGg/p3KkhIpqOrRxhMz9" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WySzC8X+5Rn5Ie6K7P/C4pWO5dDTCvPT5" crossorigin="anonymous"></script>
+
+</body>
+</html>

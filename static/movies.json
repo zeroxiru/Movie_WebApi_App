@@ -6,41 +6,158 @@
         "name": "Inception",
         "director": "Christopher Nolan",
         "year": 2010,
-        "rating": 8.8
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
+      },
+      "2": {
+        "name": "Spider-Man",
+        "director": "Sam Raimi",
+        "year": 2002,
+        "rating": 7.4,
+        "poster": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg",
+        "actors": "Tobey Maguire, Kirsten Dunst, Willem Dafoe",
+        "plot": "After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy."
+      },
+      "3": {
+        "name": "The Lord of the Rings: The Fellowship of the Ring",
+        "director": "Peter Jackson",
+        "year": 2001,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+      }
+    }
+  },
+  "2": {
+    "name": "Ibrahim",
+    "movies": {
+      "1": {
+        "name": "The Silence of the Lambs",
+        "director": "Jonathan Demme",
+        "year": 1991,
+        "rating": 8.6,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "actors": "Jodie Foster, Anthony Hopkins, Scott Glenn",
+        "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims."
       },
       "2": {
         "name": "The Dark Knight",
         "director": "Christopher Nolan",
         "year": 2008,
-        "rating": 9.0
+        "rating": 9.0,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+        "actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
       },
       "3": {
-        "name": "Inception",
-        "director": "Christopher Nolan",
-        "year": 2010,
-        "rating": 8.8
+        "name": "The Godfather",
+        "director": "Francis Ford Coppola",
+        "year": 1972,
+        "rating": 9.2,
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "actors": "Marlon Brando, Al Pacino, James Caan",
+        "plot": "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger."
       }
     }
   },
-  "2": {
-    "id": "2",
-    "name": "Ibrahim",
-    "movies": {}
-  },
   "3": {
-    "id": "3",
     "name": "Rahamath Ullah",
-    "movies": {}
+    "movies": {
+      "1": {
+        "name": "The Lord of the Rings: The Fellowship of the Ring",
+        "director": "Peter Jackson",
+        "year": 2001,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+      },
+      "2": {
+        "name": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "year": 2008,
+        "rating": 9.0,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+        "actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+      },
+      "3": {
+        "name": "Spider-Man",
+        "director": "Sam Raimi",
+        "year": 2002,
+        "rating": 7.4,
+        "poster": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg",
+        "actors": "Tobey Maguire, Kirsten Dunst, Willem Dafoe",
+        "plot": "After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy."
+      }
+    }
   },
   "4": {
-    "id": "4",
     "name": "Rahamath Ullah",
-    "movies": {}
+    "movies": {
+      "1": {
+        "name": "Forrest Gump",
+        "director": "Robert Zemeckis",
+        "year": 1994,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "actors": "Tom Hanks, Robin Wright, Gary Sinise",
+        "plot": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart."
+      },
+      "2": {
+        "name": "Avatar",
+        "director": "James Cameron",
+        "year": 2009,
+        "rating": 7.9,
+        "poster": "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+        "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+        "plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
+      },
+      "3": {
+        "name": "Terminator 2: Judgment Day",
+        "director": "James Cameron",
+        "year": 1991,
+        "rating": 8.6,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "actors": "Arnold Schwarzenegger, Linda Hamilton, Edward Furlong",
+        "plot": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg."
+      }
+    }
   },
   "5": {
-    "id": "5",
     "name": "Alice",
-    "movies": {}
+    "movies": {
+      "1": {
+        "name": "The Silence of the Lambs",
+        "director": "Jonathan Demme",
+        "year": 1991,
+        "rating": 6.6,
+        "poster": "N/A",
+        "actors": "N/A",
+        "plot": "N/A"
+      },
+      "2": {
+        "name": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
+      },
+      "3": {
+        "name": "Terminator 2: Judgment Day",
+        "director": "James Cameron",
+        "year": 1991,
+        "rating": 8.6,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "actors": "Arnold Schwarzenegger, Linda Hamilton, Edward Furlong",
+        "plot": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg."
+      }
+    }
   },
   "6": {
     "name": "Frank",
@@ -49,13 +166,25 @@
         "name": "The Lord of the Rings: The Fellowship of the Ring",
         "director": "Peter Jackson",
         "year": 2001,
-        "rating": 8.8
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+        "actors": "Elijah Wood, Ian McKellen, Orlando Bloom",
+        "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
       },
       "2": {
-        "name": "The Shawshank Redemption",
-        "director": "Frank Darabont",
-        "year": 1994,
-        "rating": 9.3
+        "name": "Ibrahim",
+        "director": "dfvfd",
+        "year": 2010,
+        "rating": 5.0
+      },
+      "3": {
+        "name": "Titanic",
+        "director": "James Cameron",
+        "year": 1997,
+        "rating": 7.9,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Kate Winslet",
+        "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
       }
     }
   },
@@ -66,13 +195,19 @@
         "name": "The Godfather",
         "director": "Francis Ford Coppola",
         "year": 1972,
-        "rating": 9.2
+        "rating": 9.2,
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "actors": "Marlon Brando, Al Pacino, James Caan",
+        "plot": "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger."
       },
       "2": {
         "name": "The Dark Knight",
         "director": "Christopher Nolan",
         "year": 2008,
-        "rating": 9.0
+        "rating": 9.0,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+        "actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
       },
       "3": {
         "name": "Pulp Fiction",
@@ -89,13 +224,28 @@
         "name": "Pulp Fiction",
         "director": "Quentin Tarantino",
         "year": 1994,
-        "rating": 8.9
+        "rating": 8.9,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        "actors": "John Travolta, Uma Thurman, Samuel L. Jackson",
+        "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
       },
       "2": {
         "name": "The Matrix",
         "director": "Lana Wachowski, Lilly Wachowski",
         "year": 1999,
-        "rating": 8.7
+        "rating": 8.7,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        "plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence."
+      },
+      "3": {
+        "name": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
       }
     }
   },
@@ -106,7 +256,10 @@
         "name": "The Silence of the Lambs",
         "director": "Jonathan Demme",
         "year": 1991,
-        "rating": 8.6
+        "rating": 8.6,
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "actors": "Jodie Foster, Anthony Hopkins, Scott Glenn",
+        "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims."
       },
       "2": {
         "name": "Forrest Gump",
@@ -119,12 +272,40 @@
         "director": "Quentin Tarantino",
         "year": 1994,
         "rating": 8.9
+      },
+      "4": {
+        "name": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": 8.8,
+        "poster": "N/A",
+        "actors": "N/A",
+        "plot": "N/A"
       }
     }
   },
   "10": {
     "name": "Jack",
-    "movies": {}
+    "movies": {
+      "1": {
+        "name": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": 8.8,
+        "poster": "N/A",
+        "actors": "N/A",
+        "plot": "N/A"
+      },
+      "2": {
+        "name": "The Amazing Spiderman 2 Webb Cut",
+        "director": "Vicente Canales",
+        "year": 2021,
+        "rating": 5.0,
+        "poster": "https://m.media-amazon.com/images/M/MV5BYzYzZDViNWYtNWViMS00NDMxLThlN2YtZjFkOWMwODkzNzhiXkEyXkFqcGdeQXVyMTUwMzM4NzU0._V1_SX300.jpg",
+        "actors": "Marcelo Alessandrini Acosta, Iv\u00e1n Alejandro Cu\u00e9llar Avil\u00e9s, Paul Mocencahua Badillo",
+        "plot": "The extended version of 2014's The Amazing Spider-Man 2. Includes never before seen footage and alternate takes of the movie."
+      }
+    }
   },
   "11": {
     "name": "Kate",
@@ -140,6 +321,15 @@
         "director": "Christopher Nolan",
         "year": 2012,
         "rating": 8.4
+      },
+      "3": {
+        "name": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": 8.8,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
       }
     }
   },
@@ -157,6 +347,15 @@
         "director": "Francis Ford Coppola",
         "year": 1972,
         "rating": 9.2
+      },
+      "3": {
+        "name": "Terminator",
+        "director": "Ben Hernandez",
+        "year": 1991,
+        "rating": 6.1,
+        "poster": "N/A",
+        "actors": "Loris Basso, James Callahan, Debbie Medows",
+        "plot": "A cyborg comes from the future, to kill a girl named Sarah Lee."
       }
     }
   },
@@ -202,16 +401,25 @@
     "name": "Paul",
     "movies": {
       "1": {
-        "name": "The Silence of the Lambs",
+        "name": "None",
         "director": "Jonathan Demme",
         "year": 1991,
-        "rating": 8.6
+        "rating": 6.5
       },
       "2": {
         "name": "The Lord of the Rings: The Return of the King",
         "director": "Peter Jackson",
         "year": 2003,
         "rating": 8.9
+      },
+      "3": {
+        "name": "Titanic",
+        "director": "James Cameron",
+        "year": 1997,
+        "rating": 7.9,
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "actors": "Leonardo DiCaprio, Kate Winslet",
+        "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
       }
     }
   },
@@ -240,12 +448,6 @@
         "director": "Francis Ford Coppola",
         "year": 1972,
         "rating": 9.2
-      },
-      "2": {
-        "name": "Inception",
-        "director": "Christopher Nolan",
-        "year": 2010,
-        "rating": 8.8
       }
     }
   },
@@ -268,10 +470,6 @@
   },
   "20": {
     "name": "Tom",
-    "movies": {}
-  },
-  "21": {
-    "name": "Ibrahim Rahamath Ullah",
     "movies": {}
   }
 }

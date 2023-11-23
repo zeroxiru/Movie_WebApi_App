@@ -55,7 +55,6 @@ class JSONDataManager(DataManagerInterface):
             user_list = self._movies_data
             return user_list
 
-
         except KeyError as e:
             # Handle the case where a user entry is missing the "name" key
             print(f"Error: {e}. 'name' key not found in a user entry.")
